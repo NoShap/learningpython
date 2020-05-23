@@ -1,3 +1,9 @@
+# Author: Noah Shapiro All Rights Reserved, copyright 2020 © 
+# Date: 5/23/2020
+# Project: Learning Python
+# Module: objects1.py
+
+
 import math
 import random
 import re # Regular Expression pattern matching module
@@ -169,5 +175,46 @@ D['food']              # Fetch value of key 'food'
 D['quantity'] += 1     # Add 1 to 'quantity' value
 print(D)
 # {'color': 'pink', 'food': 'Spam', 'quantity': 5}
+
+
+'f' in D 			   # in membership expression allows us to know if a dict contains a certain key
+# False
+
+# if not 'f' in D 	   # combining conditionals with boolean expressions
+	# Do something 
+
+
+# ----- Tuples -----
+# Very similar to lists except they are immutable so they provide some sort of
+# certainty that they will not be changed by random methods like .append()
+
+T = (1, 2, 3, 4)            # A 4-item tuple
+len(T)                      # Length
+4
+
+T + (5, 6)                   # Concatenation
+# (1, 2, 3, 4, 5, 6)
+
+T[0]                        # Indexing, slicing, and more
+# 1
+
+# T[0] = 2                    # Tuples are immutable so this line will not work!
+# ...error text omitted...
+# TypeError: 'tuple' object does not support item assignment
+
+T = (2,) + T[1:]            # Make a new tuple for a new value
+# (2, 2, 3, 4)
+
+
+# ----- Tuples -----
+# File objects are Python codes object to interact with files on your computer!
+
+f = open('data.txt', 'w')      # Make a new file in output mode ('w' is write)
+f.write('Hello\n')             # Write strings of characters to it
+6
+f.write('world\n')             # Return number of items written in Python 3.X
+6
+f.close()                      # Close to flush output buffers to disk
+
 
 
