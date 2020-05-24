@@ -216,5 +216,42 @@ f.write('world\n')             # Return number of items written in Python 3.X
 6
 f.close()                      # Close to flush output buffers to disk
 
+# Properties of mutable and immutable objects 
+
+L1 = [2, 3, 4]        # A mutable object
+L2 = L1               # Make a reference to the same object
+print(L2)
+
+L1[0] = 24            # An in-place change
+L1                    # L1 is different
+# [24, 3, 4]
+L2                    # But so is L2!
+# [24, 3, 4]
+
+L1 = 24				  # L2 still regerences the old list!
+
+# In order to have this not occur, we would need to create a copy of our list
+L2 = [2, 3, 4]
+L3 = L1[:]            # Make a copy of L1 (or list(L1), copy.copy(L1), etc.)
+L1[0] = 24
+
+
+L = [1, 2, 3]
+M = L                 # M and L reference the same object
+
+# First check is on VALUE, second check is on Object Identity
+L == M                # Same values
+# True
+L is M                # Same objects
+# True
+
+# Get precise number of references to a specific object 
+sys.getrefcount(1)    # A lot of pointers to this shared piece of memory
+# 647
+
+# Dynamic Typing essentially means that variables are just references to objects
+# and can reference objects of any type.
+
+
 
 
