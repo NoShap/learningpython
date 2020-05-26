@@ -3,6 +3,7 @@
 # Project: Learning Python
 # Module: strings.py
 import re
+import sys
 
 # Intro: There are three major types of basic objects within Python
 # NUMBERS(Integer, floating-point, decimal, fraction)

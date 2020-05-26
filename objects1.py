@@ -6,6 +6,7 @@
 import math
 import random
 import re # Regular Expression pattern matching module
+import sys
 
 random.random()
 # 0.7082048489415967
@@ -181,7 +182,26 @@ print(D)
 
 # if not 'f' in D 	   # combining conditionals with boolean expressions
 	# Do something 
-
+# -- useful methods
+"""
+D.keys()				# Methods: all keys
+D.values()				# all values
+D.items()				# all key+value tuples,
+D.copy()				# copy (top-level),
+D.clear()				# clear (remove all items),
+D.update(D2)			# merge by keys,
+D.get(key, default)			# fetch by key, if absent set default (or None),
+D.pop(key, default)			# remove by key, if absent default (or error)
+D.setdefault(key, default)		# fetch by key, if absent default (or None),
+D.popitem()						# remove/return any (key, value) pair; etc.
+"""
+D = {'spam': 2, 'ham': 1, 'eggs': 3} 
+# print(D)
+del D['eggs']                                 # Delete entry
+# print(D)
+D2 = {'toast':4, 'muffin': 5, 'spam': 6}           # Lots of delicious scrambled order here
+D2.update(D)
+print(D2)
 
 # ----- Tuples -----
 # Very similar to lists except they are immutable so they provide some sort of
@@ -231,8 +251,8 @@ L1 = 24				  # L2 still regerences the old list!
 
 # In order to have this not occur, we would need to create a copy of our list
 L2 = [2, 3, 4]
-L3 = L1[:]            # Make a copy of L1 (or list(L1), copy.copy(L1), etc.)
-L1[0] = 24
+L3 = L2[:]            # Make a copy of L1 (or list(L1), copy.copy(L1), etc.)
+L2[0] = 24
 
 
 L = [1, 2, 3]
