@@ -3,7 +3,6 @@
 # Project: Learning Python
 # Module: objects1.py
 
-
 import math
 import random
 import re # Regular Expression pattern matching module
